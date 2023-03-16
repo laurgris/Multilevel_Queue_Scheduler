@@ -13,14 +13,11 @@
  *
  * Data related to the order the processes should be scheduled
  * foreQueue and backQueue are the FOREGROUND and BACKGROUND queues respectively.
- *
- * Hint: It may also help to track the number of time steps that have been processed so far.
  */
 typedef struct schedule
 {
     Queue *foreQueue;
     Queue *backQueue;
-    //TODO: Put the data for your schedule program here!
 	int stepsTotal;
 
 
