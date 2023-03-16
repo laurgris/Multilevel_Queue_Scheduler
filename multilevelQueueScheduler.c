@@ -20,7 +20,6 @@ static bool  promotionImminent = false;
  */
 void printNames( )
 {
-    /* TODO : Fill in you and your partner's names (or N/A if you worked individually) */
     printf("\nThis solution was completed by:\n");
     printf("Lauren Grissom\n");
     printf("Christian Walker\n\n");
@@ -34,13 +33,12 @@ void printNames( )
  */
 schedule* createSchedule( ) {
 	
-    /* TODO: malloc space for a new schedule and initialize the data in it */
 	schedule* s = (schedule*)malloc(sizeof(schedule));
 	s->foreQueue = createQueue();
 	s->backQueue = createQueue();
 	s->stepsTotal = 0;
 	
-    return s; /* TODO: Replace with your return value */
+    return s;
 }
 
 /* isScheduleUnfinished
@@ -51,7 +49,6 @@ schedule* createSchedule( ) {
  * Return TRUE if there is.  Otherwise false.
  */
 bool isScheduleUnfinished( schedule *ps ) {
-    /* TODO: check if there are any process still in a queue.  Return TRUE if there is. */
 	if(!isEmpty(ps->foreQueue) || !isEmpty(ps->backQueue)){
 		return true;
 	}
@@ -166,7 +163,6 @@ char* runNextProcessInSchedule( schedule *ps ) {
 	
 	ps->stepsTotal += numExecuted;
 	
-	/*promoted = false;*/
     return ret; 
 }
 
@@ -178,8 +174,6 @@ char* runNextProcessInSchedule( schedule *ps ) {
  * This function might be tricky so you might save it for last.
  */
 void attemptPromote( schedule *ps ) {
-    /* TODO: complete this function.
-    The function "promoteProcess" in processSimulator.c will be useful in completing this. */
 	int count = 0;
 	
 	do{
@@ -190,7 +184,6 @@ void attemptPromote( schedule *ps ) {
 			promoteProcess(getNext(ps->backQueue)->name, getNext(ps->backQueue)->data);
 			getNext(ps->backQueue)->prior = FOREGROUND;
 			enqueue(ps->foreQueue, dequeue(ps->backQueue));
-			/*promoted = true;*/
 		}
 		else{
 			count++;
