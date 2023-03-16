@@ -1,3 +1,5 @@
+/* THIS FILE WAS CONTRIBUTED BY INSTRUCTOR, DR. JESSICA SHERETTE. */
+
 #ifndef _processSimulator_h
 #define _processSimulator_h
 #include <stdlib.h>
