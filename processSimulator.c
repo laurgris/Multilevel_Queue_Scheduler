@@ -1,3 +1,5 @@
+/* THIS FILE WAS CONTRIBUTED BY INSTRUCTOR, DR. JESSICA SHERETTE. */
+
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
