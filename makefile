@@ -1,4 +1,6 @@
-# Makefile comments……
+# THIS FILE WAS CONTRIBUTED BY INSTRUCTOR, DR. JESSICA SHERETTE.
+
+# Makefile commentsâ€¦â€¦
 PROGRAMS = driver
 CC = gcc
 CFLAGS = -Wall -g
